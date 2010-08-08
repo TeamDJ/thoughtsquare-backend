@@ -13,7 +13,7 @@ ActiveRecord::Schema.define(:version => 20100808101553) do
 
   create_table "users", :force => true do |t|
     t.string   "email"
-    t.string   "display"
+    t.string   "display_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
