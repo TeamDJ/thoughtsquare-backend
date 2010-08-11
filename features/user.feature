@@ -1,4 +1,4 @@
-Feature: User Registration
+Feature: User Management
   In order to use ThoughtSquare
   As a user
   I want to register
