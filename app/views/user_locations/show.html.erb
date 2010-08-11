@@ -1,3 +1,13 @@
+<p>
+  <b>User:</b>
+  <%=h @user_location.user %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @user_location.location %>
+</p>
+
 
 <%= link_to 'Edit', edit_user_location_path(@user_location) %> |
 <%= link_to 'Back', user_locations_path %>

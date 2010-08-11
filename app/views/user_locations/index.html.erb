@@ -2,11 +2,15 @@
 
 <table>
   <tr>
+    <th>User</th>
+    <th>Location</th>
   </tr>
 
 <% @user_locations.each do |user_location| %>
   <tr>
-    <td><%= link_to 'Show', user_location %></td>
+    <td><%=h user_location.user %></td>
+    <td><%=h user_location.location %></td>
+	<td><%= link_to 'Show', user_location %></td>
     <td><%= link_to 'Edit', edit_user_location_path(user_location) %></td>
     <td><%= link_to 'Destroy', user_location, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
