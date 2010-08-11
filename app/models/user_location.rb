@@ -1,4 +1,6 @@
 class UserLocation < ActiveRecord::Base
+  validates_presence_of :user, :location
+  
   belongs_to :user
-  belongs_to :user_location
+  belongs_to :location
 end
