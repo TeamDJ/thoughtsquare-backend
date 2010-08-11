@@ -1,0 +1,12 @@
+<h1>Editing user_location</h1>
+
+<% form_for(@user_location) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @user_location %> |
+<%= link_to 'Back', user_locations_path %>
