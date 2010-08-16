@@ -8,6 +8,11 @@
   <%=h @user.display_name %>
 </p>
 
+<p>
+  <b>Current Location:</b>
+  <%=h @user.current_location %>
+</p>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

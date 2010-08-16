@@ -5,7 +5,8 @@ class User < ActiveRecord::Base
 
   has_many :user_locations
   has_many :locations, :through => :user_locations
-  
+  belongs_to :current_location, :class_name => "Location", :foreign_key => "current_location_id"
+    
   def to_s
     display_name
   end
