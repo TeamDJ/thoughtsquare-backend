@@ -23,6 +23,6 @@ class Event < ActiveRecord::Base
   end
   
   def as_json(options={})
-    super(:only => [:user_id, :event_type, :location_id], :methods =>[:title, :description])
+    super(:only => [:user_id, :event_type, :location_id, :when], :methods =>[:title, :description])
   end
 end
