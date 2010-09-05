@@ -64,6 +64,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user_location = UserLocation.new(:user_id => params[:id], :location_id => params[:user][:current_location_id])
 
+    event = Event.new(:event_type => "arrive", :user => @user, :location => @user_location.location)
+    event.save!
+    
     respond_to do |format|
       if @user.update_attributes(params[:user]) && @user_location.save
         format.html { redirect_to(@user, :notice => 'User was successfully updated.') }

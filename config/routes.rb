@@ -4,6 +4,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :locations
 
   map.resources :users
+  
+  map.connect 'events', :controller => 'events', :action => 'index'
 
   # The priority is based upon order of creation: first created -> highest priority.
 

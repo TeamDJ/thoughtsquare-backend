@@ -2,8 +2,8 @@
 
 one:
   email: MyString
-  display: MyString
+  display_name: MyString
 
 two:
   email: MyString
-  display: MyString
+  display_name: MyString
