@@ -62,10 +62,10 @@ class UsersController < ApplicationController
   # PUT /users/1.xml
   def update
     @user = User.find(params[:id])
-    @user_location = UserLocation.new(:user_id => params[:id], :location_id => params[:user][:current_location_id])
+    @user_location = UserLocation.new(:user_id => params[:id], :location_id => params[:user][:current_location_id]).save
 
     respond_to do |format|
-      if @user.update_attributes(params[:user]) && @user_location.save
+      if @user.update_attributes(params[:user])
         format.html { redirect_to(@user, :notice => 'User was successfully updated.') }
         format.xml  { head :ok }
         format.json { head :ok }
