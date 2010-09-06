@@ -1,11 +1,16 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  title: MyString
+  title: one
   latitude: 1.5
   longitude: 1.5
 
 two:
-  title: MyString
+  title: two
+  latitude: 1.5
+  longitude: 1.5
+  
+three:
+  title: three
   latitude: 1.5
   longitude: 1.5
