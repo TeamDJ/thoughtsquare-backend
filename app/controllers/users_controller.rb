@@ -62,10 +62,9 @@ class UsersController < ApplicationController
   # PUT /users/1.xml
   def update
     @user = User.find(params[:id])
-    @user_location = UserLocation.new(:user_id => params[:id], :location_id => params[:user][:current_location_id]).save
-
-    event = Event.new(:event_type => "arrive", :user => @user, :location => @user_location.location, :when => Time.now)
-    event.save!
+    @location = Location.find(params[:user][:current_location_id])
+    UserLocation.new(:user => @user, :location => @location).save!
+    Event.new(:event_type => "arrive", :user => @user, :location => @location, :when => Time.now).save!
     
     respond_to do |format|
       if @user.update_attributes(params[:user])
