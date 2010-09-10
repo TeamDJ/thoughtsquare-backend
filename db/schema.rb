@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100905054402) do
+ActiveRecord::Schema.define(:version => 20100906105533) do
 
   create_table "events", :force => true do |t|
     t.integer  "user_id"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20100905054402) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "current_location_id"
+    t.string   "mobile_number"
   end
 
 end
